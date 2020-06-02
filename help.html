@@ -11,7 +11,111 @@ title: Help
 
 <article id="main">
 				<header class="special container">
-					<h2>Using HTML
+					<h2>How to Website
 					<br /></h2>
-					<p>Hi guys! This is a hidden page that I've made that you can use to help you edit the website! It'll have some basic HTML commands and briefly explain the different components (and also potentially act as a record of who is doing what)</p>
+					<p>Hi guys! This is a hidden page that I've made that you can use to help you edit the website! It'll have some basic HTML commands and briefly explain the different bits and bobs involved (and also potentially act as a record of who is doing what)</p>
+					<p>Each of these files is written in a combination of CSS and HTML, however the bits you'll be editing will be HTML only I think. </p>
+					<p>The theme is called Twenty, and if you ever need to get something from the original theme (i.e. grab the template for the "left sidebar" page) you can download it all at this link.</p>
+					<p>To add a webpage, create a new file with the extension .html (e.g. newpage.html).</p>
 				</header>
+
+				<header class="special container">
+					<h2>Key HTML
+					<br /></h2>
+				</header>
+				<table style="width:50%;margin-left:auto;margin-right:auto;border:1px solid black;padding: 15px;border-spacing:50px;">
+				  <tr>
+				    <td><strong>Code</strong></td>
+				    <td><strong>Function</strong></td>
+				    <td><strong>Result</strong></td>
+				  </tr>
+				  <tr>
+				    <td>&lt;p&gt; Text &lt;/p&gt;</td>
+				    <td>New Paragraph </td>
+				    <td <p> Begin writing... </p> <p> ...And start a new paragraph </p> </td>
+				  </tr>
+				    <tr>
+							<td>&lt;br&gt; Text &lt;/br&gt;</td>
+					    <td>Line Break. Similar to new paragraph, but doesn't always appear on mobile.</td>
+					    <td <br> Look, a line </br> <br> break </br> <br> </br> </td>
+				  </tr>
+					<tr>
+						<td>&lt;span class="image featured"&gt; &lt;img src="images/pic01.jpg"&gt &lt;/span&gt;;</td>
+						<td>Add an image. The "class" section is to do with formatting! If you want to change the picture just alter the path. <br> </br></td>
+						<td> I mean we all know what an image looks like right?</td>
+				</tr>
+				<tr>
+					<td> A sentence with &lta href="http://www.website-link.com"&gt Text that you want the link from &lt;/a&gt; and other text ;</td>
+					<td>Put a link in text</td>
+					<td> Check out <a href="http://www.jacopocolo.com/hexclock/">this cool website</a> which turns the time into a hex colour!</td>
+			</tr>
+			<tr>
+				<td> Regular and &lt;strong&gt bold text &lt;/strong&gt</td>
+				<td>Bold Text</td>
+				<td> Small text, <strong>bold text</strong></td>
+		</tr>
+				</table>
+
+
+				<header class="special container">
+					<h2>Jeckyll
+					<br /></h2>
+					<p>So <a href= "https://jekyllrb.com/" >Jeckyll</a> is a static website generator, so it's the bit that actually reads the code to piece together the site. It's a pain in the arse to get onto your computer (at least it was on my computer, which was from work so super locked down) but once it's running it allows you to make edits to the code locally (i.e. in somewhere like Atom), run the website on your computer, and see the changes you've made. </p>
+					<p>If you'd like a go at installing Jeckyll, here are the steps. <strong>IMPORANT: This is much harder if you're running on a work computer as they've locked everything down securely so you can't install things!!</strong></p>
+					<p>1) Go to the <a href  ="https://github.com/Kunji-Lab/kunji-lab.github.io" >Kunji Lab Github Repo</a> and download it as a zipfile (click on the green "clone or download" button). Extract the zipfile and drag it to the Desktop.</p>
+					<p>2) Set up a Ruby environment using instructions found at <a href  ="https://jekyllrb.com/docs/installation/" >this link</a>. These commands need to run in the terminal, which all the Macs should have. The terminal should be Bash if it's a home computer or -tsch if it's a work one.</p>
+					<p>3) Change your current directory in the terminal to the folder in the desktop with our website in using the command <strong>cd ~/Desktop/kunji-lab.github.io</strong> </p>
+					<p>4) Run the command <strong> gem install jekyll bundler</strong> </p>
+					<p>5) Run the command <strong> jekyll serve</strong>. This will give you a few lines of text, one of which will say "Server address: http://127.0.0.1:4000/". This is the location the website is currently running on, using your comptuer as a server! So go and type http://127.0.0.1:4000/ into your browser and it should come up! </p>
+					<p>6) Enjoy the fact you've succeeded in doing something that's really, really difficult to set up! </p>
+					<p>Congratulations! Jekyll is now building the website locally! Now, if you want you edit something, open up the kunji-lab.github.io folder in a text editor, such as Atom, to see the code. There you can edit text, images, etc. If you then save what you've been working on, and refresh the page in your browser, you should see the new changes appear! Don't worry, this is just local for now - it's not the live website you're changing. Play around with it and have fun! </p>
+				</header>
+
+					<header class="special container">
+						<h2>I've made local changes to a page that I'd like to go on the actual website! How do I do this?
+						<br /></h2>
+						<p>Great question! This is where we use github: We're going to get Github to look at our work and identify differences between our work and what it currently has stored. Then we will get Github to take those changes and save them. Finally, we'll push our changes to the repo. Let's go!</p>
+						<br> </br>
+						<p>1) Go back into the terminal, and ensure that the current directory is kunji-lab.github.io</p>
+						<p>2) Run the command <strong> git add . </strong> in the terminal. This identifies changes.</p>
+						<p>3) Run the command <strong> git commit -m  "commit message in speech marks"</strong> in the terminal. This stores the changes with a message about what you've done (e.g. updated structural page). You'll need your github username and password for this!</p>
+						<p>4) Run the command <strong> git push </strong> in the terminal. This pushes the changes into our repo. The changes will occur to the live website in a few minutes!</p>
+				</header>
+
+
+				<header class="special container">
+					<h2>This whole Jeckyll thing is difficult! Can I edit the website any other way?
+					<br /></h2>
+					<p>Sure! The easiest thing to do would be to send what you'd like doing to me (Alannah) e.g. "Here's the writing I'd like to go onto the Cardiolipin project page" and I'll pop it on. Alternatively, you can use Github itself!</p>
+					<br> </br>
+					<p>1) Go to the  <a href  ="https://github.com/Kunji-Lab/kunji-lab.github.io" >Kunji Lab Github Repo</a> and click on the Fork button in the top right. This will create your own fork of the repository, and you'll see the name of the repository as, for exmaple, ak2022/kunji-lab. This means it's now a copy in your Github!</p>
+					<p>2) Click on the folders/files to access them, and once inside a file click on the pencil button on the top right to edit it. Make any changes, then click "Commit Changes" (essentially, fancy save). </p>
+					<p>3) When you're happy with the changes you've made, click on the "Pull Request" tab (Or go to github.com/ak2022/kunji-lab.github.io/pulls, for example). Click "Create New Pull Request" and give it a name, and write some info describing the changes you've made. Then click "Create Pull Request"</p>
+					<p>4) It's done! It will wait until I have reviewed it (to ensure it's all okay :D) and then I will merge it into the main website.</p>
+			</header>
+
+			<section class="wrapper style1 container special">
+				<div class="row">
+					<div class="4u">
+
+						<section>
+							<span class="image featured"><img src="images/1.jpg"></span>
+						</section>
+
+					</div>
+					<div class="4u">
+
+						<section>
+							<span class="image featured"><img src="images/2.jpg"></span>
+						</section>
+
+					</div>
+					<div class="4u">
+
+						<section>
+							<span class="image featured"><img src="images/3.jpg"></span>
+						</section>
+
+					</div>
+				</div>
+			</section>
