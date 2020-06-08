@@ -562,7 +562,8 @@
 /* Wrapper */
 
 	.wrapper {
-		margin-bottom: 5em;
+		margin-bottom: 1.5em;
+		margin-top: 5em;
 		padding: 5em;
 	}
 
