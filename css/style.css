@@ -896,7 +896,8 @@
 			}
 
 	body.index #main {
-		padding-top: 5em;
+		padding-top: 4em;
+		padding-bottom: 0em;
 	}
 
 /* CTA */
