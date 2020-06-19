@@ -5,13 +5,13 @@ Title: News
 
 <article id="main">
     <header class="special container">
-      <span class="fas fa-code"></span>
-        <h2>My <strong>Blog</strong></h2>
+      <span class="icon fas fa-newspaper"></span>
+        <h2><strong>Lab News</strong></h2>
     </header>
     <section class="wrapper style4 container">
         <ul class="posts">
           {% for post in site.posts %}
-            <li class="wrapper {% if forloop.first %} style2 {% else %} style1 {% endif %}">
+            <li class="wrapper style1">
               <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
                 {{ post.excerpt }}
                 <section class="special">
